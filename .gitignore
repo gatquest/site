@@ -1,0 +1,14 @@
+.git/
+/backend/.idea
+/backend/venv
+/frontend/.idea
+/frontend/.vscode
+/frontend/node_modules
+.DS_Store
+.idea/*
+
+**/node_modules
+**/.idea
+**/venv
+**/.angular
+
