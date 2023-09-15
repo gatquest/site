@@ -1,18 +1,18 @@
 {
   "/api/*": {
-    "target": "http://176.113.83.226:1337",
+    "target": "http://176.113.83.226:80",
     "secure": false,
     "logLevel": "debug",
     "crossOrigin": true
   },
   "/media/*": {
-    "target": "http://176.113.83.226:1337/",
+    "target": "http://176.113.83.226:80/",
     "secure": false,
     "logLevel": "debug",
     "crossOrigin": true
   },
   "/admin/*": {
-    "target": "http://176.113.83.226:1337/",
+    "target": "http://176.113.83.226:80/",
     "secure": false,
     "logLevel": "debug",
     "crossOrigin": true
