@@ -1,17 +1,53 @@
-<ul class="sidenav sidenav-fixed a-sidenav">
-  <h4>NAGLO CRM</h4>
-  <li class="bold " routerLinkActive="active"><a href="overview" class="waves-effect waves-orange">Обзор</a></li>
-  <li class="bold" routerLinkActive="active"><a routerLink="new" class="waves-effect waves-orange">Новая продажа</a></li>
-  <li class="bold"><a href="#" class="waves-effect waves-orange">Заказ у фабрики</a></li>
-  <li class="bold"><a href="#" class="waves-effect waves-orange">Проверка товара</a></li>
-  <li class="bold "><a href="#" class="waves-effect waves-orange">Отправка из Москвы</a></li>
-  <li class="bold last"><a (click)="logout()">Выйти</a></li>
-</ul>
+<!--<ul class="sidenav sidenav-fixed a-sidenav">-->
+<!--  <h4>NAGLO CRM</h4>-->
+<!--  <li class="bold " routerLinkActive="active"><a href="overview" class="waves-effect waves-orange">Обзор</a></li>-->
+<!--  <li class="bold" routerLinkActive="active"><a routerLink="new" class="waves-effect waves-orange">Новая продажа</a></li>-->
+<!--  <li class="bold"><a href="#" class="waves-effect waves-orange">Заказ у фабрики</a></li>-->
+<!--  <li class="bold"><a href="#" class="waves-effect waves-orange">Проверка товара</a></li>-->
+<!--  <li class="bold "><a href="#" class="waves-effect waves-orange">Отправка из Москвы</a></li>-->
+<!--  <li class="bold last"><a (click)="logout()">Выйти</a></li>-->
+<!--</ul>-->
+
+<mat-toolbar color="primary">
+  <span class="fill-remaining-space">
+    <button mat-icon-button [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger" (mouseover)="menuTrigger.openMenu()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu" [overlapTrigger]="false">
+    <span (mouseleave)="menuTrigger.closeMenu()">
+      <button mat-menu-item>
+        <a href="/overview" >
+          Главная
+        </a>
+      </button>
+      <button mat-menu-item>
+        <a routerLink="new" class="waves-effect waves-orange">
+          Новая продажа
+        </a>
+      </button>
+<!--      <button mat-menu-item>-->
+<!--        <a routerLink="new" class="waves-effect waves-orange">-->
+<!--          <mat-icon>home</mat-icon>Новая продажа-->
+<!--        </a>-->
+<!--      </button>-->
+      <button mat-menu-item (click)="logout()">
+        <a class="waves-effect waves-orange">
+          Выйти
+        </a>
+      </button>
+  </span>
+  </mat-menu>
+  </span>
+  <span class="fill-remaining-space">CRM NAGLO</span>
+</mat-toolbar>
 
 
-<main class="content">
+<!--<main class="content">-->
+<div class="app">
   <router-outlet></router-outlet>
-</main>
+</div>
+<!--</main>-->
 
 <!--CONTENT-->
 <!--<main class="content">-->
