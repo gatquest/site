@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {ApiService} from "../../service/api.service";
 import {FormControl, FormGroup} from "@angular/forms";
 import {MaterialService} from "../../classes/material.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-new-sale',
@@ -14,7 +15,8 @@ export class NewSaleComponent {
   public previewImage: any;
 
   constructor(
-    private api: ApiService
+    private api: ApiService,
+    public router: Router
   ) {
     this.orderForm = new FormGroup({
       brand: new FormControl(),
@@ -59,6 +61,8 @@ export class NewSaleComponent {
     this.api.post(formData).subscribe(
       (data)=>{
         MaterialService.toost('Заказ сохранен !')
+        this.orderForm.reset()
+        this.router.navigate(['/overview'])
       },
       (error)=>{
         MaterialService.toost(error.error.detail)

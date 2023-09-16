@@ -17,6 +17,8 @@ import {SalesComponent} from "./component/sales/sales.component";
 import {MatTableModule} from "@angular/material/table";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -31,7 +33,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
   ],
   imports: [
     BrowserModule,
-    RouterModule,
+    // RouterModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
@@ -39,7 +41,8 @@ import {MatFormFieldModule} from "@angular/material/form-field";
     MatTableModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
-
+    MatInputModule,
+    MatSnackBarModule,
 
   ],
   providers: [

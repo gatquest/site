@@ -30,10 +30,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-jrdf)!_b)$=mnoa*mu!fq_vpr&lm*in%r!@jmb=l1*)mg8he44'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['176.113.83.226',
-                 'localhost']
+                 'localhost',
+                 '127.0.0.1']
 
 
 # Application definition

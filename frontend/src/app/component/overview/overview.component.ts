@@ -24,7 +24,7 @@ export class OverviewComponent implements OnInit{
 
   logout(){
     this.auth.logout();
-    this.router.navigateByUrl('/')
+    this.router.navigate(['/login'])
   }
 
 

@@ -12,3 +12,5 @@
 **/venv
 **/.angular
 
+**/__pycache__/
+**/mediafiles/
