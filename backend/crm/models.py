@@ -8,8 +8,9 @@ from django.db import models
 
 class Sale(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+
     created_at = models.DateTimeField(
-        auto_now_add=True, verbose_name='Время создания')
+        default=None, verbose_name='Время создания')
     num_order = models.IntegerField(verbose_name='Номер заказа', unique=True, null=True, blank=True, default=None)
     client = models.CharField(max_length=10000, verbose_name='Данные клиента', blank=True, null=True, default='')
     brand = models.CharField(max_length=10000, verbose_name='Брэнд', blank=True, null=True, default='')
