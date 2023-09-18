@@ -23,6 +23,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatButtonModule} from "@angular/material/button";
+import { OneSaleComponent } from './component/one-sale/one-sale.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {MatButtonModule} from "@angular/material/button";
     RegisterPageComponent,
     OverviewComponent,
     NewSaleComponent,
-    SalesComponent
+    SalesComponent,
+    OneSaleComponent
   ],
   imports: [
     BrowserModule,

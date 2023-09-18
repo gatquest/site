@@ -8,13 +8,15 @@ import {AuthGuard} from "./classes/auth.guard";
 import {OverviewComponent} from "./component/overview/overview.component";
 import {NewSaleComponent} from "./component/new-sale/new-sale.component";
 import {SalesComponent} from "./component/sales/sales.component";
+import {OneSaleComponent} from "./component/one-sale/one-sale.component";
 
 const routes: Routes = [
   {
     path: '', component: SiteLayoutComponent, canActivate: [AuthGuard], children:[
       {path: '', redirectTo: 'overview', pathMatch: 'full'},
       {path: 'overview', component: OverviewComponent, children: [
-          {path: '', component: SalesComponent},
+          {path: '', component: OneSaleComponent},
+          {path: 'table', component: SalesComponent},
           {path: 'new', component: NewSaleComponent,},
           {path: 'fabric', component: OverviewComponent,},
           {path: 'receiption', component: OverviewComponent,},

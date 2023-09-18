@@ -1,0 +1,34 @@
+<div class="parent">
+  <div *ngFor="let order of orders" class="child">
+    <div class="div-numer">
+      <span class="span-numer">{{order.num_order}}</span>
+    </div>
+    <div class="div-img" >
+      <img [src]="order.image" class="img-back" alt="">
+      <img [src]="order.image" class="image" alt="">
+    </div>
+    <div class="div-desc">
+      <div style="display: flex; justify-content: space-around">
+        <span style="font-weight: 500">{{order.size}}</span>
+        <span style="color: red">Фото стельки</span>
+      </div>
+
+
+      <div>{{order.client}}</div>
+      <div>{{order.comment}}</div>
+
+      <div style="display: flex; justify-content: space-around; font-weight: 200; font-size: 20px; color: grey; margin-top: 5px">
+        <span>{{order.created_at | date:'dd.MM.YY'}}</span>
+        <span>{{order.price_cl}} Руб</span>
+      </div>
+
+    </div>
+<!--    <div class="div-img">-->
+<!--      <img [src]="order.image" class="image" alt="">-->
+<!--    </div>-->
+    <div></div>
+  </div>
+</div>
+
+
+
