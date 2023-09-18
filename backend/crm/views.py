@@ -27,8 +27,7 @@ class SaleViewSet(viewsets.ModelViewSet):
             request.data.update(num_order=(last_order.num_order+1))
         else:
             request.data.update(num_order=100)
-        if(not request.data['created_at']):
-            request.data.update(created_at=timezone.now())
+        request.data.update(created_at=timezone.now())
         request.data._mutable = False
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
