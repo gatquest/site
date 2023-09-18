@@ -21,12 +21,12 @@ services:
     expose:
       - 8000
 
-  frontend:
-    build:
-      context: frontend/
-      dockerfile: Dockerfile
-    volumes:
-      - web_data:/usr/src/app
+        #  frontend:
+        #    build:
+        #      context: frontend/
+        # dockerfile: Dockerfile
+        # volumes:
+        # - web_data:/usr/src/app
 
   nginx:
     build: nginx
@@ -34,7 +34,7 @@ services:
       - 80:80
     depends_on:
       - backend
-      - frontend
+        # - frontend
     volumes:
       - web_data:/usr/src/app
       - static:/backend/static
